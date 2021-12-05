@@ -3,9 +3,8 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    --titles: 'Outfit', sans-serif; 
-    --texts: 'Cabin', sans-serif;
-
+    --titles: 'Outfit', sans-serif;
+    --text: 'Cabin', sans-serif;
     --dark1:#2e3440;
     --dark2:#3b4252;
     --dark3: #434c5e;
@@ -26,8 +25,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: var(--texts);
-    color: var(--white)
+    font-family: var(--text);
+    color: var(--dark1)
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -36,7 +35,6 @@ const GlobalStyle = createGlobalStyle`
 
   #__next {
     margin: 0 auto;
-    width: 90%;
     min-height: 100vh;
   }
 `;

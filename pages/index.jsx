@@ -1,9 +1,7 @@
-import styled from "styled-components";
+import Header from "../components/Header";
 
-const Title = styled.h1`
-  font-size: 50px;
-`;
+const Home = () => {
+  return <Header />;
+};
 
-export default function Home() {
-  return <Title>My page</Title>;
-}
+export default Home;
