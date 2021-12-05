@@ -9,6 +9,7 @@ const Header = () => {
   const Header = styled.header`
     display: grid;
     grid-template-columns: 1fr;
+    min-height: 100vh;
 
     @media (min-width: 768px) {
       grid-template-columns: 1fr 1fr;
@@ -16,7 +17,10 @@ const Header = () => {
   `;
 
   const NavbarHero = styled.section`
-    padding: 3rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   `;
 
   const Navbar = styled.nav`
@@ -26,20 +30,14 @@ const Header = () => {
   `;
 
   const Hero = styled.div`
-    h1 {
-      font-weight: 700;
-      font-size: 40px;
-    }
-
     p {
-      font-size: 2.3rem;
       padding: 2rem 0;
     }
+  `;
 
-    div {
-      display: flex;
-      justify-content: space-evenly;
-    }
+  const HeroButtons = styled.div`
+    display: flex;
+    justify-content: space-evenly;
   `;
 
   const ImageComponent = styled(Image)`
@@ -62,11 +60,11 @@ const Header = () => {
             porro fugiat ipsa aliquid voluptate cum temporibus harum, alias
             facere, molestias id quos corrupti, magnam iure.
           </p>
-          <div>
-            <Button text="Log in" />
-            <Button text="Sign up" />
-          </div>
         </Hero>
+        <HeroButtons>
+          <Button text="Log in" />
+          <Button text="Sign up" />
+        </HeroButtons>
       </NavbarHero>
       <ImageComponent
         src={SunsetPhotography}
