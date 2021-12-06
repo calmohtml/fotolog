@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
-import NaturePhotography from "../public/photographerNature.jpg";
-import Button from "./Button";
+import Kid from "../public/photographerKid.jpg";
 
 const Content = () => {
   const Content = styled.section`
@@ -13,25 +12,16 @@ const Content = () => {
   `;
 
   const ContentContainer = styled.div`
-    display: grid;
-    grid-template-columns: 1fr;
-    min-height: 100vh;
-
-    @media (min-width: 768px) {
-      grid-template-columns: 1fr 1fr;
-    }
+    position: relative;
+    text-align: center;
+    color: var(--white);
   `;
 
-  const ContentBulletpoints = styled.ul`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 2rem;
-
-    li {
-      list-style: none;
-      padding: 2rem 0;
-    }
+  const ContentCentered = styled.div`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   `;
 
   const ImageComponent = styled(Image)`
@@ -40,37 +30,21 @@ const Content = () => {
 
   return (
     <Content>
-      <h2>Join a community</h2>
+      <h2>Become a photo-blogger.</h2>
       <ContentContainer>
         <ImageComponent
-          src={NaturePhotography}
+          src={Kid}
+          height={450}
           layout="intrinsic"
           objectFit="cover"
           objectPosition="center"
         />
-        <ContentBulletpoints>
-          <li>
-            <h3>Make your photos a storytelling.</h3>
-            <p>
-              Discover millons of rooms, filled with fascinanting and unexpected
-              conversations.
-            </p>
-          </li>
-          <li>
-            <h3>Choose who is gonna be part of it.</h3>
-            <p>Express yourself through your lenses.</p>
-          </li>
-          <li>
-            <h3>Create a personal dairy.</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
-              veniam.
-            </p>
-          </li>
-          <li>
-            <Button text="Login" />
-          </li>
-        </ContentBulletpoints>
+        <ContentCentered>
+          <h3>
+            Let your style define what do you think. Express yourself, and
+            inspire people through your pics.
+          </h3>
+        </ContentCentered>
       </ContentContainer>
     </Content>
   );
