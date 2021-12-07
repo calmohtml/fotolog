@@ -17,11 +17,12 @@ const Content = () => {
     color: var(--white);
   `;
 
-  const ContentCentered = styled.div`
+  const ContentCentered = styled.h3`
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
   `;
 
   const ImageComponent = styled(Image)`
@@ -34,16 +35,14 @@ const Content = () => {
       <ContentContainer>
         <ImageComponent
           src={Kid}
-          height={450}
+          height={525}
           layout="intrinsic"
           objectFit="cover"
           objectPosition="center"
         />
         <ContentCentered>
-          <h3>
-            Let your style define what do you think. Express yourself, and
-            inspire people through your pics.
-          </h3>
+          Let your style define what do you think. Express yourself, and inspire
+          people through your pics.
         </ContentCentered>
       </ContentContainer>
     </Content>

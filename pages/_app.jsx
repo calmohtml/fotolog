@@ -48,6 +48,11 @@ const GlobalStyle = createGlobalStyle`
     font-size: 3rem;
   }
 
+  h4 {
+    font-weight: 400;
+    font-size: 2.5rem;
+  }
+
   p {
     font-size: 2.75rem;
   }
