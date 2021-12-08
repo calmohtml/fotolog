@@ -4,6 +4,7 @@ import Image from "next/image";
 import Logo from "../public/logo.svg";
 import styled from "styled-components";
 import SunsetPhotography from "../public/photographerDawn.jpg";
+import Link from "next/link";
 
 const Header = () => {
   const Header = styled.header`
@@ -62,8 +63,16 @@ const Header = () => {
           </p>
         </Hero>
         <HeroButtons>
-          <Button text="Log in" />
-          <Button text="Sign up" />
+          <Link passHref href="/login">
+            <a>
+              <Button text="Log in" />
+            </a>
+          </Link>
+          <Link passHref href="/signup">
+            <a>
+              <Button text="Sign up" />
+            </a>
+          </Link>
         </HeroButtons>
       </NavbarHero>
       <ImageComponent

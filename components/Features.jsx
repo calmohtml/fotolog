@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import NaturePhotography from "../public/photographerNature.jpg";
 import Button from "./Button";
+import Link from "next/link";
 
 const Features = () => {
   const Features = styled.section`
@@ -68,7 +69,11 @@ const Features = () => {
             </p>
           </li>
           <li>
-            <Button text="Login" />
+            <Link passHref href="/login">
+              <a>
+                <Button text="Log in" />
+              </a>
+            </Link>
           </li>
         </FeaturesBulletpoints>
       </FeaturesContainer>
