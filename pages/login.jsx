@@ -14,7 +14,7 @@ const Login = () => {
   `;
 
   const Container = styled.div`
-    @media (max-width: 1024px) {
+    @media (max-width: 810px) {
       border: 1px solid red;
       display: grid;
       grid-template-columns: 1fr;
@@ -26,14 +26,15 @@ const Login = () => {
 
   const FormContainer = styled.section`
     display: grid;
-    grid-template-rows: 1fr 0fr 1fr;
+    grid-template-rows: 2fr 0fr 2fr;
     height: 100vh;
-    padding: 0 5rem;
+    padding: 5rem 5rem;
 
     span {
       display: flex;
       align-items: center;
       justify-content: center;
+      background-color: var(--white);
 
       h3 {
         margin: 0rem 1.25rem;
@@ -41,13 +42,39 @@ const Login = () => {
     }
 
     div {
+      background-color: var(--white);
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
     }
 
     form {
+      background-color: var(--white);
       display: flex;
       flex-direction: column;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        margin: 0 auto;
+
+        label {
+          font-weight: bold;
+          font-size: 2.75rem;
+        }
+
+        input,
+        button {
+          width: 51rem;
+          height: 6.5rem;
+          border-radius: 1.125rem;
+          border: 0.3rem solid var(--dark2);
+        }
+
+        hr {
+          margin: 1rem 0;
+        }
+      }
     }
   `;
 
@@ -72,13 +99,19 @@ const Login = () => {
             <p>Log in</p>
           </div>
           <form action="">
-            <label htmlFor="">Your email</label>
-            <input type="text" placeholder="myemail@provider.com" />
-            <label htmlFor="">Your password</label>
-            <input type="text" placeholder="*******" />
-            <button type="submit">Login</button>
-            <hr />
-            <button type="">Create account</button>
+            <div>
+              <label htmlFor="">Your email</label>
+              <input type="text" placeholder="myemail@provider.com" />
+            </div>
+            <div>
+              <label htmlFor="">Your password</label>
+              <input type="text" placeholder="*******" />
+            </div>
+            <div>
+              <button type="submit">Login</button>
+              <hr />
+              <button type="">Create account</button>
+            </div>
           </form>
         </FormContainer>
         <div></div>
